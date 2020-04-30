@@ -3,7 +3,7 @@
 ?>
 <body>
     <div id="frm" class="container">
-        <form action="login.inc.php" method="POST">
+        <form action="includes/login.inc.php" method="POST">
             <text>STUDENT LOGIN</text>
             <p>
                 <label>Username </label>

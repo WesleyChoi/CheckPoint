@@ -18,7 +18,7 @@
 			<li><a href="#">Feedback</a></li>
 			<?php
 				if (isset($_SESSION['userId'])) {
-					echo '<li><a href="logout.inc.php">Logout</a></li>';
+					echo '<li><a href="includes/logout.inc.php">Logout</a></li>';
 				}
 				else {
 					echo '<li><a href="signup.php">Login/Signup</a></li>';
