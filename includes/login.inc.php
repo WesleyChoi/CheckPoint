@@ -19,7 +19,7 @@
                 exit();
             }
             else {
-                mysqli_stmt_bind_param($stmt, "ss", $username, $username);
+                mysqli_stmt_bind_param($stmt, "ss", $username, $password);
                 mysqli_stmt_execute($stmt);
                 $result = mysqli_stmt_get_result($stmt);
                 // check that we get a result
@@ -55,25 +55,4 @@
         header("Location: ../index.php");
         exit();
     }
-
-    // prevent mysql injection (used to hack passwords)
-    $username = stripcslashes($username);
-    $password = stripcslashes($password);
-    $username = mysqli_real_escape_string($username);
-    $password = mysqli_real_escape_string($password);
-
-    // connect to server, select login database
-    mysqli_connect("localhost", "root", "");
-    mysqli_select_db("loginsystem");
-
-    // query database for user
-    $result = mysql_query("select * from users where username = '$username' and password = '$password'") 
-            or die("Failed to query database ".mysql_error());
-    $row = mysql_fetch_array($result);
-    if ($row['username'] == $username && $row['password'] == $password ){
-        echo "Welcome to Checkpoint, ".$row['username'];
-    } else {
-        echo "Failed to login";
-    }
-
 ?>

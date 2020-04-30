@@ -8,7 +8,7 @@
                     echo 'Welcome to Checkpoint, ' . $_SESSION['userUid'];
                 }
                 else {
-                    echo '<p class="login-status">You are not logged in!</p>';
+                    echo 'You are not logged in!';
                 }
             ?>
         </div>
