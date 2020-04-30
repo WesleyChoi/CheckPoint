@@ -28,7 +28,7 @@
 
     // connect to server, select login database
     mysqli_connect("localhost", "root", "");
-    mysqli_select_db("login");
+    mysqli_select_db("loginsystem");
 
     // query database for user
     $result = mysql_query("select * from users where username = '$username' and password = '$password'") 
