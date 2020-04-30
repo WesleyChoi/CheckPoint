@@ -1,8 +1,24 @@
 <?php
+    // login.inc.php sends entries from login form
+    if (isset($_POST['login-submit'])) {
+        require 'dbh.inc.php';
 
-    // login.php sends entries from form
-    $username = $_POST['user'];
-    $password = $_POST['pass'];
+        $username = $_POST['user'];
+        $password = $_POST['pass'];
+
+        if (empty($username) || empty($password)) { // send them back
+            header("Location: ../index.php");
+            exit();
+        }
+        else {
+            $sql = "SELECT * FROM users WHERE uidUsers=?;"; // check for username
+            $stmt = mysqli_stmt_init($conn); // new sqli statement
+        }
+    }
+    else {
+        header("Location: ../index.php");
+        exit();
+    }
 
     // prevent mysql injection (used to hack passwords)
     $username = stripcslashes($username);

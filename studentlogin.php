@@ -7,16 +7,17 @@
             <text>STUDENT LOGIN</text>
             <p>
                 <label>Username </label>
-                <input type="text" id="user" name="user"    />
+                <input type="text" name="uid"    />
             </p>
             <p>
                 <label>Password </label>
-                <input type="text" id="pass" name="pass"   />
+                <input type="password" name="pwd"   />
             </p>
             <p>
-                <input type="submit" id="btn" value="Login"     />
+                <button type="submit" name="login-submit">Login</button>
             </p>
-        <a href=teacherlogin.php>Are you a teacher? Login here.</a>
+        <p><a href=teacherlogin.php>Are you a teacher? Login here.</a></p>
+        <p><a href=signup.php>Don't have an account? Sign up here.</a></p>
         </form>
     </div>
 </body>
