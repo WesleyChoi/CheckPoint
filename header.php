@@ -13,6 +13,8 @@
 		<ul>
 			<li><a href="#">About Us</a></li>
 			<li><a href="#">Feedback</a></li>
+			<li><a href="signup.php">Login/Signup</a></li>
+			<li><a href="logout.inc.php">Logout</a></li>
 		</ul>
 	</nav>
 </div>
