@@ -4,9 +4,9 @@ if(isset($_POST['signup=submit'])) {
 
     require 'dbh.inc.php';
 
-    $username = $_POSTp['uid'];
-    $password = $_POSTp['pwd'];
-    $passwordrepeat = $_POSTp['pwd-repeat'];
+    $username = $_POST['uid'];
+    $password = $_POST['pwd'];
+    $passwordrepeat = $_POST['pwd-repeat'];
     
     if (empty($username) || empty($password) || empty($passwordrepeat)) {
         header("Location: ../signup.php?error=emptyfields&uid=".$username);
