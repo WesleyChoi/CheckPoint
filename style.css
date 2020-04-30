@@ -1,8 +1,12 @@
 body{
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
+}
+
+a{
+    color: purple;
 }
 
 #frm{
@@ -20,6 +24,14 @@ body{
     background: #337ab7;
     padding: 5px;
     margin-left: 69%;
+}
+
+#container{
+    color: black;
+    background: rgb(237, 240, 239);
+    padding: 5px;
+    border: solid gray 1px;
+    border-radius: 5px;
 }
 
 #footer{
