@@ -4,16 +4,26 @@
 ?>
 
     <main>
-        <div class="wrapper-main"
+        <div class="wrapper-main" id="frm">
             <section class="section-default">
-                <h1>Signup</h1>
+                <text>Signup</text>
                 <form class="form-signup" action="includes/signup.inc.php" method="post">
-                    <input type="text" name="uid" placeholder="Username">
-                    <input type="password" name="pwd" placeholder= "Password">
-                    <input type="password" name="pwd-repeat" placeholder= "Repeat Password">
+                <!-- note that there are no id's for username, password, and repeat password -->
+                    <p>
+                        <label>Username </label>
+                        <input type="text" name="uid"    />
+                    </p>
+                    <p>
+                        <label>Password  </label>
+                        <input type="text" name="pwd"    />
+                    </p>
+                    <p>
+                        <label>Repeat Password </label>
+                        <input type="text" name="pwd-repeat"    />
+                    </p>
                     <button type="submit" name="signup-submit">Signup</button>
                 </form>
-                <a href=studentlogin.php>Already have an account? Login here.</a>
+                <br><a href=studentlogin.php>Already have an account? Login here.</a>
             </section>
         </div>
     </main>
