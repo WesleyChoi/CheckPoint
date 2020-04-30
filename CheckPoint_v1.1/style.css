@@ -24,6 +24,11 @@ body{
 
 #footer{
     background: gray;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
     color: white;
     padding: 10px;
 }
