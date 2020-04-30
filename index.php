@@ -5,7 +5,7 @@
         <div id="container">
             <?php
                 if (isset($_SESSION['userId'])) {
-                    echo '<p class="login-status">You are logged in!</p>';
+                    echo 'Welcome to Checkpoint, ' . $_SESSION['userUid'];
                 }
                 else {
                     echo '<p class="login-status">You are not logged in!</p>';
