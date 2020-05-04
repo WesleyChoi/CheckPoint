@@ -20,7 +20,7 @@ if(isset($_POST['signup-submit'])) {
     }
     else {
 
-        $sql = "SELECT uidUsers FROM students WHERE uidUsers=?";
+        $sql = "SELECT uidUsers FROM teachers WHERE uidUsers=?";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
             header("Location: ../signup.php?error=sqlerror");
@@ -36,7 +36,7 @@ if(isset($_POST['signup-submit'])) {
                 exit();
             }
             else{
-                $sql = "INSERT INTO students (firstName, lastName, uidUsers, pwdUsers) VALUES (?, ?, ?, ?)";
+                $sql = "INSERT INTO teachers (firstName, lastName, uidUsers, pwdUsers) VALUES (?, ?, ?, ?)";
                 $stmt = mysqli_stmt_init($conn);
                 if (!mysqli_stmt_prepare($stmt, $sql)) {
                     header("Location: ../signup.php?error=sqlerror");
