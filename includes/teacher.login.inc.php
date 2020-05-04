@@ -1,5 +1,5 @@
 <?php
-    // login.inc.php sends entries from login form
+    // teacher.login.inc.php sends entries from login form
     if (isset($_POST['login-submit'])) {
         require 'dbh.inc.php';
 
@@ -33,10 +33,12 @@
                     else if ($pwdCheck == true) {
                         // login the user! start a session for a session variable
                         session_start();
+                        $_SESSION['userFn'] = $row['firstName'];
+                        $_SESSION['userLn'] = $row['lastName'];
                         $_SESSION['userId'] = $row['idUsers'];
                         $_SESSION['userUid'] = $row['uidUsers'];
                         
-                        header("Location: ../teachers.html?login=success");
+                        header("Location: ../teachers.php?login=success");
                         exit();
                     }
                     else { // some mistake happened

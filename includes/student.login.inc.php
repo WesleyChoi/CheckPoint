@@ -33,10 +33,12 @@
                     else if ($pwdCheck == true) {
                         // login the user! start a session for a session variable
                         session_start();
+                        $_SESSION['userFn'] = $row['firstName'];
+                        $_SESSION['userLn'] = $row['lastName'];
                         $_SESSION['userId'] = $row['idUsers'];
                         $_SESSION['userUid'] = $row['uidUsers'];
                         
-                        header("Location: ../students.html?login=success");
+                        header("Location: ../students.php?login=success");
                         exit();
                     }
                     else { // some mistake happened

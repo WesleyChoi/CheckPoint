@@ -8,13 +8,13 @@
             <?php
                 if (isset($_GET['error'])) {
                     if ($_GET['error'] == "emptyfields") {
-                        echo '<p class="signuperror">You have not filled in all fields.</p>';
+                        echo '<p class="loginerror">You have not filled in all fields.</p>';
                     } else if ($_GET['error'] == "wrongpwd") {
-                        echo '<p class="signuperror">Wrong password.</p>';
+                        echo '<p class="loginerror">Wrong password.</p>';
                     } else if ($_GET['error'] == "nouser") {
-                        echo '<p class="signuperror">There is no user with that username.</p>';
+                        echo '<p class="loginerror">There is no user with that username.</p>';
                     } else if ($_GET['error'] == "sqlerror") {
-                        echo '<p class="signuperror">There was a problem with our database.</p>';
+                        echo '<p class="loginerror">There was a problem with our database.</p>';
                     }
                 }
             ?>

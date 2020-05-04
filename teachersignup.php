@@ -6,8 +6,8 @@
     <main>
         <div class="wrapper-main" id="frm">
             <section class="section-default">
-                <text>Signup</text>
-                <form class="form-signup" action="includes/signup.inc.php" method="POST">
+                <text>Teacher Account Signup</text>
+                <form class="form-signup" action="includes/teacher.signup.inc.php" method="POST">
                 <!-- note that there are no id's for username, password, and repeat password -->
                     <?php
                         if (isset($_GET['error'])) {
@@ -45,6 +45,7 @@
                     <button type="submit" name="signup-submit">Signup</button>
                 </form>
                 <br><a href=teacherlogin.php>Already have an account? Login here.</a>
+                <br><a href=studentsignup.php>Are you a student? Signup here.</a>
             </section>
         </div>
     </main>

@@ -11,11 +11,11 @@ if(isset($_POST['signup-submit'])) {
     $passwordrepeat = $_POST['pwd-repeat'];
     
     if (empty($firstname) || empty($lastname) || empty($username) || empty($password) || empty($passwordrepeat)) {
-        header("Location: ../signup.php?error=emptyfields&uid=".$username);
+        header("Location: ../studentsignup.php?error=emptyfields&uid=".$username);
         exit();
     }
     else if ($password !== $passwordrepeat) {
-        header("Location: ../signup.php?error=passwordcheck&uid=".$username);
+        header("Location: ../studentsignup.php?error=passwordcheck&uid=".$username);
         exit();
     }
     else {
@@ -23,7 +23,7 @@ if(isset($_POST['signup-submit'])) {
         $sql = "SELECT uidUsers FROM students WHERE uidUsers=?";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
-            header("Location: ../signup.php?error=sqlerror");
+            header("Location: ../studentsignup.php?error=sqlerror");
             exit();
         }
         else {
@@ -32,14 +32,14 @@ if(isset($_POST['signup-submit'])) {
             mysqli_stmt_store_result($stmt);
             $resultCheck = mysqli_stmt_num_rows($stmt);
             if ($resultCheck > 0) {
-                header("Location: ../signup.php?error=usertaken");
+                header("Location: ../studentsignup.php?error=usertaken");
                 exit();
             }
             else{
                 $sql = "INSERT INTO students (firstName, lastName, uidUsers, pwdUsers) VALUES (?, ?, ?, ?)";
                 $stmt = mysqli_stmt_init($conn);
                 if (!mysqli_stmt_prepare($stmt, $sql)) {
-                    header("Location: ../signup.php?error=sqlerror");
+                    header("Location: ../studentsignup.php?error=sqlerror");
                     exit();
                 }
                 else{
