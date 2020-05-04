@@ -2,7 +2,7 @@
     require "header.php";
 ?>
 <body>
-    <div id="container">
+    <div id="announcement">
         <t>This is the home page for students to access</t><br>
         <?php
             if (isset($_SESSION['userId'])) {
