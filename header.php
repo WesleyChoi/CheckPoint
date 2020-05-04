@@ -15,7 +15,7 @@
 	<nav class="nav-header-main">
 		<ul>
 			<li><a href="aboutus.php">About Us</a></li>
-			<li><a href="#">Feedback</a></li>
+			<li><a href="feedback.php">Feedback</a></li>
 			<?php
 				if (isset($_SESSION['userId'])) {
 					echo '<li><a href="includes/logout.inc.php">Logout</a></li>';
