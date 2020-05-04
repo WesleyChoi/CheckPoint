@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_POST['signup=submit'])) {
+if(isset($_POST['signup-submit'])) {
 
     require 'dbh.inc.php';
 
@@ -25,7 +25,7 @@ if(isset($_POST['signup=submit'])) {
             exit();
         }
         else {
-            mysqli_smt_bind_param($stmt, "s", $username);
+            mysqli_stmt_bind_param($stmt, "s", $username);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_store_result($stmt);
             $resultCheck = mysqli_stmt_num_rows($stmt);
@@ -43,7 +43,7 @@ if(isset($_POST['signup=submit'])) {
                 else{
                     $hashedpwd = password_hash($password, PASSWORD_DEFAULT);
 
-                    mysqli_stmt_bind_param($stmt, "ss", $username, $hashedPwd);
+                    mysqli_stmt_bind_param($stmt, "ss", $username, $hashedpwd);
                     mysqli_stmt_execute($stmt);
                     header("Location: ../signup.php?signup=success");
                     exit();

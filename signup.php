@@ -7,7 +7,7 @@
         <div class="wrapper-main" id="frm">
             <section class="section-default">
                 <text>Signup</text>
-                <form class="form-signup" action="includes/signup.inc.php" method="post">
+                <form class="form-signup" action="includes/signup.inc.php" method="POST">
                 <!-- note that there are no id's for username, password, and repeat password -->
                     <p>
                         <label>Username </label>
@@ -15,11 +15,11 @@
                     </p>
                     <p>
                         <label>Password  </label>
-                        <input type="text" name="pwd"    />
+                        <input type="password" name="pwd"    />
                     </p>
                     <p>
                         <label>Repeat Password </label>
-                        <input type="text" name="pwd-repeat"    />
+                        <input type="password" name="pwd-repeat"    />
                     </p>
                     <button type="submit" name="signup-submit">Signup</button>
                 </form>
