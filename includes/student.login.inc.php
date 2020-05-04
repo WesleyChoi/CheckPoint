@@ -11,7 +11,7 @@
             exit();
         }
         else {
-            $sql = "SELECT * FROM users WHERE uidUsers=?;"; // check for username
+            $sql = "SELECT * FROM students WHERE uidUsers=?;"; // check for username
             $stmt = mysqli_stmt_init($conn); // new sqli statement
             // check that works with database
             if (!mysqli_stmt_prepare($stmt, $sql)) {

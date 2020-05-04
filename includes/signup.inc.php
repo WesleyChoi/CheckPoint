@@ -4,11 +4,13 @@ if(isset($_POST['signup-submit'])) {
 
     require 'dbh.inc.php';
 
+    $firstname = $_POST['fn'];
+    $lastname = $_POST['ln'];
     $username = $_POST['uid'];
     $password = $_POST['pwd'];
     $passwordrepeat = $_POST['pwd-repeat'];
     
-    if (empty($username) || empty($password) || empty($passwordrepeat)) {
+    if (empty($firstname) || empty($lastname) || empty($username) || empty($password) || empty($passwordrepeat)) {
         header("Location: ../signup.php?error=emptyfields&uid=".$username);
         exit();
     }
@@ -18,7 +20,7 @@ if(isset($_POST['signup-submit'])) {
     }
     else {
 
-        $sql = "SELECT uidUsers FROM users WHERE uidUsers=?";
+        $sql = "SELECT uidUsers FROM students WHERE uidUsers=?";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
             header("Location: ../signup.php?error=sqlerror");
@@ -34,7 +36,7 @@ if(isset($_POST['signup-submit'])) {
                 exit();
             }
             else{
-                $sql = "INSERT INTO users (uidUsers, pwdUsers) VALUES (?, ?)";
+                $sql = "INSERT INTO students (firstName, lastName, uidUsers, pwdUsers) VALUES (?, ?, ?, ?)";
                 $stmt = mysqli_stmt_init($conn);
                 if (!mysqli_stmt_prepare($stmt, $sql)) {
                     header("Location: ../signup.php?error=sqlerror");
@@ -43,9 +45,9 @@ if(isset($_POST['signup-submit'])) {
                 else{
                     $hashedpwd = password_hash($password, PASSWORD_DEFAULT);
 
-                    mysqli_stmt_bind_param($stmt, "ss", $username, $hashedpwd);
+                    mysqli_stmt_bind_param($stmt, "ssss", $firstname, $lastname, $username, $hashedpwd);
                     mysqli_stmt_execute($stmt);
-                    header("Location: ../signup.php?signup=success");
+                    header("Location: ../index.php?signup=success");
                     exit();
 
                 }

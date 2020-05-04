@@ -25,6 +25,8 @@
                     <p>
                         <label>First Name </label>
                         <input type="text" name="fn"    />
+                    </p>
+                    <p>
                         <label>Last Name </label>
                         <input type="text" name="ln"    />
                     </p>
