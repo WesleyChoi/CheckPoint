@@ -14,7 +14,7 @@
 	<a id="title" href=index.php style="color: black; text-decoration: none;"><h1>CHECKPOINT</h1></a>
 	<nav class="nav-header-main">
 		<ul>
-			<li><a href="#">About Us</a></li>
+			<li><a href="aboutus.php">About Us</a></li>
 			<li><a href="#">Feedback</a></li>
 			<?php
 				if (isset($_SESSION['userId'])) {

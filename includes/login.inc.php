@@ -36,7 +36,7 @@
                         $_SESSION['userId'] = $row['idUsers'];
                         $_SESSION['userUid'] = $row['uidUsers'];
                         
-                        header("Location: ../index.php?login=success");
+                        header("Location: ../students.html?login=success");
                         exit();
                     }
                     else { // some mistake happened
