@@ -30,7 +30,7 @@
                 <button type="submit" name="login-submit">Login</button>
             </p>
         <p><a href=teacherlogin.php>Are you a teacher? Login here.</a></p>
-        <p><a href=signup.php>Don't have an account? Sign up here.</a></p>
+        <p><a href=studentsignup.php>Don't have an account? Sign up here.</a></p>
         </form>
     </div>
 </body>

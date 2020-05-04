@@ -44,7 +44,7 @@
                     </p>
                     <button type="submit" name="signup-submit">Signup</button>
                 </form>
-                <br><a href=studentlogin.php>Already have an account? Login here.</a>
+                <br><a href=teacherlogin.php>Already have an account? Login here.</a>
             </section>
         </div>
     </main>
@@ -52,5 +52,4 @@
 <?php
     require "footer.php";
 ?>
-
 

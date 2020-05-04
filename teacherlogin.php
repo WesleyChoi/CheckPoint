@@ -4,7 +4,7 @@
 
 <body>
     <div id="frm" class="container">
-        <form action="login.inc.php" method="POST">
+        <form action="teacher.login.inc.php" method="POST">
             <text>TEACHER LOGIN</text>
             <p>
                 <label>Username </label>
@@ -18,6 +18,7 @@
                 <input type="submit" id="btn" value="Login"     />
             </p>
         <a href=studentlogin.php>Are you a student? Login here.</a>
+        <p><a href=teachersignup.php>Don't have an account? Sign up here.</a></p>
         </form>
     </div>
 </body>
