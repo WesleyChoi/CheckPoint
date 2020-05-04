@@ -7,7 +7,7 @@
         $password = $_POST['pwd'];
 
         if (empty($username) || empty($password)) { // send them back
-            header("Location: ../index.php?error=emptyfields");
+            header("Location: ../studentlogin.php?error=emptyfields");
             exit();
         }
         else {
@@ -15,7 +15,7 @@
             $stmt = mysqli_stmt_init($conn); // new sqli statement
             // check that works with database
             if (!mysqli_stmt_prepare($stmt, $sql)) {
-                header("Location: ../index.php?error=sqlerror");
+                header("Location: ../studentlogin.php?error=sqlerror");
                 exit();
             }
             else {
@@ -27,7 +27,7 @@
                     // compare the given password with database password
                     $pwdCheck = password_verify($password, $row['pwdUsers']);
                     if ($pwdCheck == false) {
-                        header("Location: ../index.php?error=wrongpwd");
+                        header("Location: ../studentlogin.php?error=wrongpwd");
                         exit();
                     }
                     else if ($pwdCheck == true) {
@@ -40,19 +40,19 @@
                         exit();
                     }
                     else { // some mistake happened
-                        header("Location: ../index.php?error=sqlerror");
+                        header("Location: ../studentlogin.php?error=sqlerror");
                         exit();
                     }
                 }
                 else {
-                    header("Location: ../index.php?error=nouser");
+                    header("Location: ../studentlogin.php?error=nouser");
                     exit();
                 }
             }
         }
     }
     else {
-        header("Location: ../index.php");
+        header("Location: ../studentlogin.php");
         exit();
     }
 ?>

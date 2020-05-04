@@ -3,8 +3,21 @@
 ?>
 <body>
     <div id="frm" class="container">
-        <form action="includes/login.inc.php" method="POST">
+        <form action="includes/student.login.inc.php" method="POST">
             <text>STUDENT LOGIN</text>
+            <?php
+                if (isset($_GET['error'])) {
+                    if ($_GET['error'] == "emptyfields") {
+                        echo '<p class="signuperror">You have not filled in all fields.</p>';
+                    } else if ($_GET['error'] == "wrongpwd") {
+                        echo '<p class="signuperror">Wrong password.</p>';
+                    } else if ($_GET['error'] == "nouser") {
+                        echo '<p class="signuperror">There is no user with that username.</p>';
+                    } else if ($_GET['error'] == "sqlerror") {
+                        echo '<p class="signuperror">There was a problem with our database.</p>';
+                    }
+                }
+            ?>
             <p>
                 <label>Username </label>
                 <input type="text" name="uid"    />

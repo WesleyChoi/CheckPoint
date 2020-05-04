@@ -110,3 +110,11 @@ button {
 #footer text{
     margin-right: 20px;
 }
+
+.signuperror{
+    color: red;
+}
+
+.loginerror{
+    color: red;
+}
