@@ -126,3 +126,17 @@ button {
 .loginerror{
     color: red;
 }
+
+#wesley{
+    width: 200 px;
+    float: left;
+    display: inline;
+    margin: 40 px;
+}
+
+#kailey{
+    width: 200 px;
+    float: right;
+    display: inline;
+    margin: 40 px;
+}
