@@ -1,19 +1,20 @@
 <?php
     // login.inc.php sends entries from login form
     if (isset($_POST['login-submit'])) {
-        if (!(isset($_POST['acctype']))) {
-            header("Location: ../login.php?error=notchecked");
-            exit();
-        }
-
         require 'dbh.inc.php';
 
-        $acctype = $_POST['acctype'];
         $username = $_POST['uid'];
         $password = $_POST['pwd'];
 
+        if (!(isset($_POST['acctype']))) {
+            header("Location: ../login.php?error=notchecked&uid=".$username);
+            exit();
+        }
+        
+        $acctype = $_POST['acctype'];
+
         if (empty($username) || empty($password)) { // send them back
-            header("Location: ../login.php?error=emptyfields");
+            header("Location: ../login.php?error=emptyfields&uid=".$username);
             exit();
         }
         else {
@@ -25,7 +26,7 @@
             $stmt = mysqli_stmt_init($conn); // new sqli statement
             // check that works with database
             if (!mysqli_stmt_prepare($stmt, $sql)) {
-                header("Location: ../login.php?error=sqlerror");
+                header("Location: ../login.php?error=sqlerror&uid=".$username);
                 exit();
             }
             else {
@@ -37,7 +38,7 @@
                     // compare the given password with database password
                     $pwdCheck = password_verify($password, $row['pwdUsers']);
                     if ($pwdCheck == false) {
-                        header("Location: ../login.php?error=wrongpwd");
+                        header("Location: ../login.php?error=wrongpwd&uid=".$username);
                         exit();
                     }
                     else if ($pwdCheck == true) {
@@ -54,12 +55,12 @@
                         exit();
                     }
                     else { // some mistake happened
-                        header("Location: ../login.php?error=sqlerror");
+                        header("Location: ../login.php?error=sqlerror&uid=".$username);
                         exit();
                     }
                 }
                 else {
-                    header("Location: ../login.php?error=nouser");
+                    header("Location: ../login.php?error=nouser&uid=".$username);
                     exit();
                 }
             }

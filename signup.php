@@ -26,15 +26,15 @@
                     ?>
                     <p>
                         <label>First Name </label>
-                        <input type="text" name="fn" required    />
+                        <input type="text" name="fn" value="<?php echo isset($_GET['fn']) ? $_GET['fn']: ''?>" required    />
                     </p>
                     <p>
                         <label>Last Name </label>
-                        <input type="text" name="ln" required    />
+                        <input type="text" name="ln" value="<?php echo isset($_GET['ln']) ? $_GET['ln']: ''?>" required    />
                     </p>
                     <p>
                         <label>Username </label>
-                        <input type="text" name="uid" required   />
+                        <input type="text" name="uid" value="<?php echo isset($_GET['uid']) ? $_GET['uid']: ''?>" required   />
                     </p>
                     <p>
                         <label>Password  </label>

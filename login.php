@@ -22,7 +22,7 @@
             ?>
             <p>
                 <label>Username </label>
-                <input type="text" name="uid" required    />
+                <input type="text" name="uid" value="<?php echo isset($_GET['uid']) ? $_GET['uid']: ''?>" required    />
             </p>
             <p>
                 <label>Password </label>
