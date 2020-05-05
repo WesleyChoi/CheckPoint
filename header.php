@@ -21,7 +21,7 @@
 					echo '<li><a href="includes/logout.inc.php">Logout</a></li>';
 				}
 				else {
-					echo '<li><a href="studentlogin.php">Login</a></li>';
+					echo '<li><a href="login.php">Login</a></li>';
 				}
 			?>
 		</ul>
