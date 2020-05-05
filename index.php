@@ -2,15 +2,13 @@
     require "header.php";
 ?>
     <body>
-        <div id="announcement">
-            <?php
-                if (isset($_GET['logout'])) {
-                    echo '<t>You have successfully logged out!</t><br>';
-                } else if (isset($_GET['signup']) && $_GET['signup'] == "success") {
-                    echo 'Signup was successful!';
-                }
-            ?>
-        </div>
+        <?php
+            if (isset($_GET['logout'])) {
+                echo '<div id="announcement"><t>You have successfully logged out!</t><br></div>';
+            } else if (isset($_GET['signup']) && $_GET['signup'] == "success") {
+                echo '<div id="announcement"><t>Signup was successful!</t></div>';
+            }
+        ?>
         <h2>Hello! Welcome to CheckPoint!</h2>
         <p>With an estimated 88% of the workforce and 25-75% of college students being affected by procrastination, it seems that there is a prominent lack of organization and productivity in individuals’ day-to-day lives.</p>
 
