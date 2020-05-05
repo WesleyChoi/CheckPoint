@@ -127,16 +127,30 @@ button {
     color: red;
 }
 
+#include{
+    text-align: center;
+    position: relative;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #wesley{
-    width: 200 px;
+    position: relative;
+    width: 35%;
+    border-radius: 5px;
+    background: rgb(143, 164, 221);
+    padding: 30px;
+    margin: 10px;
     float: left;
-    display: inline;
-    margin: 40 px;
 }
 
 #kailey{
-    width: 200 px;
+    position: relative;
+    width: 35%;
+    border-radius: 5px;
+    background: rgb(143, 164, 221);
+    padding: 30px;
+    margin: 10px;
     float: right;
-    display: inline;
-    margin: 40 px;
 }
