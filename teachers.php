@@ -13,6 +13,12 @@
             }
         ?>
     </div> 
+    <div id="container">
+        <h1>Your Classrooms</h1>
+        <button>Add a task</button>
+        <button>Delete task</button>
+        <button>View students' points</button>
+    </div>
 </body>
 <?php
     require "footer.php";

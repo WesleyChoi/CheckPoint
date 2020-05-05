@@ -8,6 +8,7 @@ if(isset($_POST['signup-submit'])) {
 
     require 'dbh.inc.php';
 
+    $acctype = $_POST['acctype'];
     $firstname = $_POST['fn'];
     $lastname = $_POST['ln'];
     $username = $_POST['uid'];
