@@ -28,23 +28,23 @@
                     ?>
                     <p>
                         <label>First Name </label>
-                        <input type="text" name="fn"    />
+                        <input type="text" name="fn" required    />
                     </p>
                     <p>
                         <label>Last Name </label>
-                        <input type="text" name="ln"    />
+                        <input type="text" name="ln" required    />
                     </p>
                     <p>
                         <label>Username </label>
-                        <input type="text" name="uid"    />
+                        <input type="text" name="uid" required   />
                     </p>
                     <p>
                         <label>Password  </label>
-                        <input type="password" name="pwd"    />
+                        <input type="password" name="pwd" required    />
                     </p>
                     <p>
                         <label>Repeat Password </label>
-                        <input type="password" name="pwd-repeat"    />
+                        <input type="password" name="pwd-repeat" required   />
                     </p>
                     <p>
                         <label>Student </label>
