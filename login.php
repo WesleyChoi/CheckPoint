@@ -15,28 +15,26 @@
                         echo '<p class="loginerror">There is no user with that username.</p>';
                     } else if ($_GET['error'] == "sqlerror") {
                         echo '<p class="loginerror">There was a problem with our database.</p>';
-                    } else if ($_GET['error'] == "studentandteacher") {
-                        echo '<p class="loginerror">You can only check one of Student or Teacher.</p>';
                     } else if ($_GET['error'] == "notchecked") {
-                        echo '<p class="loginerror">Please check one of Student or Teacher.</p>';
+                        echo '<p class="loginerror">Please select one of Student or Teacher.</p>';
                     }
                 }
             ?>
             <p>
                 <label>Username </label>
-                <input type="text" name="uid"    />
+                <input type="text" name="uid" required    />
             </p>
             <p>
                 <label>Password </label>
-                <input type="password" name="pwd"   />
+                <input type="password" name="pwd" required   />
             </p>
             <p>
                 <label>Student </label>
-                <input type="checkbox" name="acctype" value="student"   />
+                <input type="radio" name="acctype" value="student"   />
             </p>
             <p>
                 <label>Teacher </label>
-                <input type="checkbox" name="acctype" value="teacher"   />
+                <input type="radio" name="acctype" value="teacher"   />
             </p>
             <p>
                 <button type="submit" name="login-submit">Login</button>

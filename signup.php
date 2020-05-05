@@ -19,10 +19,8 @@
                                 echo '<p class="signuperror">Passwords don\'t match.</p>';
                             } else if ($_GET['error'] == "sqlerror") {
                                 echo '<p class="signuperror">There was a problem with our database.</p>';
-                            } else if ($_GET['error'] == "studentandteacher") {
-                                echo '<p class="loginerror">You can only check one of Student or Teacher.</p>';
                             } else if ($_GET['error'] == "notchecked") {
-                                echo '<p class="loginerror">Please check one of Student or Teacher.</p>';
+                                echo '<p class="loginerror">Please select one of Student or Teacher.</p>';
                             }
                         }
                     ?>
@@ -48,11 +46,11 @@
                     </p>
                     <p>
                         <label>Student </label>
-                        <input type="checkbox" name="acctype" value="student"   />
+                        <input type="radio" name="acctype" value="student"   />
                     </p>
                     <p>
                         <label>Teacher </label>
-                        <input type="checkbox" name="acctype" value="teacher"   />
+                        <input type="radio" name="acctype" value="teacher"   />
                     </p>
                     <button type="submit" name="signup-submit">Signup</button>
                 </form>
