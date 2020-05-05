@@ -17,7 +17,7 @@
 			<li><a href="aboutus.php">About Us</a></li>
 			<li><a href="feedback.php">Feedback</a></li>
 			<?php
-				if (isset($_SESSION['userId'])) {
+				if (isset($_SESSION['userUid'])) {
 					echo '<li><a href="profile.php">'.$_SESSION['userFn'].'</a></li>';
 					echo '<li><a href="includes/logout.inc.php">Logout</a></li>';
 				}

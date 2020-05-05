@@ -5,7 +5,7 @@
     <div id="announcement">
         <t>This is the home page for students to access</t><br>
         <?php
-            if (isset($_SESSION['userId'])) {
+            if (isset($_SESSION['userUid'])) {
                 echo 'Welcome to Checkpoint, ' . $_SESSION['userFn'];
             }
             else {

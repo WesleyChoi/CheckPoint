@@ -59,9 +59,18 @@ if(isset($_POST['signup-submit'])) {
 
                     mysqli_stmt_bind_param($stmt, "ssss", $firstname, $lastname, $username, $hashedpwd);
                     mysqli_stmt_execute($stmt);
-                    header("Location: ../index.php?signup=success");
-                    exit();
 
+                    // login the user! start a session for a session variable
+                    session_start();
+                    $_SESSION['userFn'] = $firstname;
+                    $_SESSION['userLn'] = $lastname;
+                    $_SESSION['userUid'] = $username;
+                    if ($acctype == "student") {
+                        header("Location: ../students.php?signup=success");
+                    } else {
+                        header("Location: ../teachers.php?signup=success");
+                    }
+                    exit();
                 }
             }
         }
