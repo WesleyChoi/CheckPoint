@@ -14,6 +14,7 @@
 	<a id="title" href=index.php style="color: black; text-decoration: none;"><h1>CHECKPOINT</h1></a>
 	<nav class="nav-header-main">
 		<ul>
+			<li><a href="index.php">Home</a></li>
 			<li><a href="aboutus.php">About Us</a></li>
 			<li><a href="feedback.php">Feedback</a></li>
 			<?php
