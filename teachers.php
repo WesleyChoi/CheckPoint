@@ -1,7 +1,6 @@
 <?php
     require "header.php";
-?>
-<?php 
+
     // initialize errors variable
 	$errors = "";
 
@@ -55,6 +54,8 @@
                 <tr>
                     <th>N</th>
                     <th>Tasks</th>
+                    <th>Task Description</th>
+                    <th>Task Value</th>
                     <th style="width: 160px;">Delete Task</th>
                 </tr>
             </thead>
