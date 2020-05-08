@@ -7,7 +7,7 @@
     
         $to = "checkpoint333@outlook.com";
         $email_subject = "New Feedback Form Submission";
-        $txt = "You have received an email from ".$user_name.".\n\n".$message;
+        $txt = "You have received an email from ".$user_name.":\n\n".$message;
         $headers = "From: ".$user_email;
 
         mail($to, $email_subject, $txt, $headers);

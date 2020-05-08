@@ -28,9 +28,6 @@
                 if ($_GET['msg'] =="mailsent") {
                     echo "<div style=\"width:100%; height=100%; \">
                     <h3>Sent your message successfully!</h3></div>";
-                } else {
-                    echo "<div style=\"width:100%; height=100%; \">
-                    <h3>Sorry, there was an error with your submission.</h3></div>";
                 }
             }
         ?>
