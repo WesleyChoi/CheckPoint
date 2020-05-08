@@ -14,12 +14,31 @@
             }
         ?>
     </div>
-    <div id="container">
-        <h1>Your List</h1>
-        <button>Add a task</button>
-        <button>View points</button>
-        <button>Completed task</button>
-        <button>Delete task</button>
+    <div id="tasklist">
+            <table>
+                <thread>
+                    <tr>
+                        <th>Tasks</th>
+                        <th>Description</th>
+                        <th>Task Value</th>
+                    </tr>
+                </thread>
+
+                <tbody>
+                    <?php
+
+                        $tasks = mysqli_query($conn, "SELECT * FROM tasks");
+
+                        $i = 1; while($row = mysqli_fetch_array($tasks)) { ?>
+                            <td class="task_input"> <?php echo $row['taskname']; ?> </td>
+                            <td class="task_about"> <?php echo $row['taskabout']; ?> </td>
+                            <td class="task_value"> <?php echo $row['taskvalue']; ?> </td>
+                            <td class="delete"> 
+                                <a href="index.php?del_task=<?php echo $row['id'] ?>">x</a> 
+                            </td>
+                            <?php $i++; } ?>
+                </tbody>
+            </table>
     </div>
 </body>
 <?php
