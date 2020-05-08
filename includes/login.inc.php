@@ -47,6 +47,9 @@
                         $_SESSION['userFn'] = $row['firstName'];
                         $_SESSION['userLn'] = $row['lastName'];
                         $_SESSION['userUid'] = $row['uidUsers'];
+                        $_SESSION['courseName'] = $row['courseName'];
+                        $_SESSION['classId'] = $row['classId'];
+                        $_SESSION['accType'] = $acctype;
                         if ($acctype == "student") {
                             header("Location: ../students.php?login=success");
                         } else {

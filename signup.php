@@ -21,6 +21,10 @@
                                 echo '<p class="signuperror">There was a problem with our database.</p>';
                             } else if ($_GET['error'] == "notchecked") {
                                 echo '<p class="loginerror">Please select one of Student or Teacher.</p>';
+                            } else if ($_GET['error'] == "nocourse") {
+                                echo '<p class="loginerror">Please fill in Class ID if you\'re a student or Course Name if you\'re a teacher.</p>';
+                            } else if ($_GET['error'] == "invalidcid") {
+                                echo '<p class="loginerror">The Class ID you\'ve entered is invalid.</p>';
                             }
                         }
                     ?>
@@ -46,11 +50,13 @@
                     </p>
                     <p>
                         <label>Student </label>
-                        <input type="radio" name="acctype" value="student"   />
+                        <input type="radio" name="acctype" value="student"   /><br>
+                        <input type="text" name="cid" placeholder="Enter Class ID"    />
                     </p>
                     <p>
                         <label>Teacher </label>
-                        <input type="radio" name="acctype" value="teacher"   />
+                        <input type="radio" name="acctype" value="teacher"  /><br>
+                        <input type="text" name="cn" value="<?php echo isset($_GET['cn']) ? $_GET['cn']: ''?>" placeholder="Enter Course Name"   />
                     </p>
                     <button type="submit" name="signup-submit">Signup</button>
                 </form>
