@@ -17,18 +17,24 @@
             </p>
             <p>
                 <label>Message </label>
-                <textarea name="message" placeholder="Write Message..."></textarea>
+                <textarea name="message" placeholder="Write Message..." required></textarea>
             </p>
             <p>
                 <button type="submit" name="submit">Submit Message</button>
             </p>
         </form>
-        <div id="success_message" style="width:100%; height=100%; display:none; ">
-            <h3>Sent your message successfully!</h3>
-        </div>
-        <div id="error_message" style="width:100%; height=100%; display:none; ">
-            <h3>Sorry, there was an error with your submission.</h3>
-        </div>
+        <?php
+            if (isset($_GET['msg'])) {
+                if ($_GET['msg'] =="mailsent") {
+                    echo "<div style=\"width:100%; height=100%; \">
+                    <h3>Sent your message successfully!</h3></div>";
+                } else {
+                    echo "<div style=\"width:100%; height=100%; \">
+                    <h3>Sorry, there was an error with your submission.</h3></div>";
+                }
+            }
+        ?>
+        
     </div>
 </body>
 <?php
