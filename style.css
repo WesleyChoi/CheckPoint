@@ -163,3 +163,8 @@ button{
     margin: 10px;
     float: left;
 }
+
+#itemclmn{
+    color: red;
+    width: 10%;
+}
