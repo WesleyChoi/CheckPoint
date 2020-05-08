@@ -54,6 +54,7 @@
     
     <!--User Input-->
     <div id="frm">
+        <h2>Set a Task</h2>
         <form method="post" action="teachers.php" class="input_form">
             <?php 
                 if (isset($errors)) { 
@@ -61,15 +62,16 @@
                 }
             ?>
 
-            <input type="text" name="task" class="task_input">
-            <input type="text" name="taskabout" class="task_about">
-            <input type="text" name="taskvalue" class="task_value">
+            <input type="text" name="task" class="task_input" placeholder="Task Name"><br>
+            <input type="text" name="taskabout" class="task_about" placeholder="Task Description"><br>
+            <input type="text" name="taskvalue" class="task_value" placeholder="Worth How Many Points"><br>
             <button type="submit" name="submit" id="add_btn" class="add_btn">Add Task</button>
         </form>
     </div>
 
     <!-- Input table display-->
     <div id="tasklist">
+        <h2><?php echo $_SESSION['courseName']?> Task List</h2>
         <table>
             <thead>
                 <tr>
