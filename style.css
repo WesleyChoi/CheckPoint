@@ -19,6 +19,16 @@ a{
     padding: 30px;
 }
 
+#tasklist{
+    border: solid gray 1px;
+    color: black;
+    width: 20%;
+    border-radius: 5px;
+    margin: 100px auto;
+    background: rgb(227, 241, 233);
+    padding: 30px;
+}
+
 button{
     color: #fff;
     background: #31857e;
