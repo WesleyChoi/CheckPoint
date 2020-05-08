@@ -11,6 +11,8 @@
 <body>
     <div id="announcement">
         <t>This is the home page for students to access</t><br>
+    </div>
+    <div id="container">
         <?php
             if (isset($_SESSION['userUid'])) {
                 echo 'Welcome to Checkpoint, ' . $_SESSION['userFn'] . '!<br>';
