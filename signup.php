@@ -51,7 +51,7 @@
                     <p>
                         <label>Student </label>
                         <input type="radio" name="acctype" value="student"   /><br>
-                        <input type="text" name="cid" placeholder="Enter Class ID"    />
+                        <input type="text" name="cid" value="<?php echo isset($_GET['cid']) ? $_GET['cid']: ''?>" placeholder="Enter Class ID"    />
                     </p>
                     <p>
                         <label>Teacher </label>
