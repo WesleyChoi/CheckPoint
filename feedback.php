@@ -20,7 +20,7 @@
                 <textarea name="message" placeholder="Write Message..."></textarea>
             </p>
             <p>
-                <button type="submit" name="Submit-Feedback">Submit Message</button>
+                <button type="submit" name="submit">Submit Message</button>
             </p>
         </form>
         <div id="success_message" style="width:100%; height=100%; display:none; ">
