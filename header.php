@@ -18,6 +18,11 @@
 			<li><a href="feedback.php">Feedback</a></li>
 			<?php
 				if (isset($_SESSION['userUid'])) {
+					if ($_SESSION['accType'] = "student") {
+						echo '<li><a href="students.php">Lists</a></li>';
+					} else {
+						echo '<li><a href="teachers.php">Lists</a></li>';
+					}
 					echo '<li><a href="profile.php">'.$_SESSION['userFn'].'</a></li>';
 					echo '<li><a href="includes/logout.inc.php">Logout</a></li>';
 				}
