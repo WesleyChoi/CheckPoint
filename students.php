@@ -7,6 +7,7 @@
         <?php
             if (isset($_SESSION['userUid'])) {
                 echo 'Welcome to Checkpoint, ' . $_SESSION['userFn'];
+                echo 'We wish you the best of luck in '.$_SESSION['courseName'].'!';
             }
             else {
                 echo 'You are not logged in!';
