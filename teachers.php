@@ -26,6 +26,13 @@
     }
     
 ?>
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+</head>
 <body>
     <div id="announcement">
         <t>This is the home page for teachers to access.</t><br>
@@ -40,9 +47,11 @@
     </div> 
     <div id="frm">
         <form method="post" action="teachers.php" class="input_form">
-            <?php if (isset($errors)) { ?>
-                <p><?php echo $errors; ?></p>
-            <?php } ?>
+            <?php 
+                if (isset($errors)) { 
+                    echo '<p>'.$errors.'</p>';
+                }
+            ?>
 
             <input type="text" name="task" class="task_input">
             <button type="submit" name="submit" id="add_btn" class="add_btn">Add Task</button>
@@ -52,11 +61,11 @@
         <table>
             <thead>
                 <tr>
-                    <th>N</th>
-                    <th>Tasks</th>
-                    <th>Task Description</th>
-                    <th>Task Value</th>
-                    <th style="width: 160px;">Delete Task</th>
+                    <th id="itemclmn">N</th>
+                    <th id="itemclmn">Tasks</th>
+                    <th id="itemclmn">Task Description</th>
+                    <th id="itemclmn">Task Value</th>
+                    <th id="itemclmn">Delete Task</th>
                 </tr>
             </thead>
 
@@ -73,7 +82,7 @@
                             <a href="teachers.php?del_task=<?php echo $row['id'] ?>">x</a> 
                         </td>
                     </tr>
-                <?php $i++; } ?>	
+                <?php $i++; } ?>
             </tbody>
         </table>
     </div>
