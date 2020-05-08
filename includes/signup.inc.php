@@ -9,7 +9,7 @@ if(isset($_POST['signup-submit'])) {
     $passwordrepeat = $_POST['pwd-repeat'];
 
     if (!(isset($_POST['acctype']))) {
-        header("Location: ../signup.php?error=notchecked&fn=".$firstname."&ln=".$lastname."&uid=".$username."&cn=".$coursename);
+        header("Location: ../signup.php?error=notchecked&fn=".$firstname."&ln=".$lastname."&uid=".$username."&cn=".$coursename."&cid=".$classid);
         exit();
     }
 
@@ -22,12 +22,8 @@ if(isset($_POST['signup-submit'])) {
         $coursename = $_POST['cn'];
     }
     
-    if (empty($firstname) || empty($lastname) || empty($username) || empty($password) || empty($passwordrepeat)) {
-        header("Location: ../signup.php?error=emptyfields&uid=".$username);
-        exit();
-    }
-    else if ($password !== $passwordrepeat) {
-        header("Location: ../signup.php?error=passwordcheck&fn=".$firstname."&ln=".$lastname."&uid=".$username."&cn=".$coursename);
+    if ($password !== $passwordrepeat) {
+        header("Location: ../signup.php?error=passwordcheck&fn=".$firstname."&ln=".$lastname."&uid=".$username."&cn=".$coursename."&cid=".$classid);
         exit();
     }
     if (empty($coursename) && empty($classid)) {
@@ -43,7 +39,7 @@ if(isset($_POST['signup-submit'])) {
         }
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
-            header("Location: ../signup.php?error=sqlerror&fn=".$firstname."&ln=".$lastname."&uid=".$username."&cn=".$coursename);
+            header("Location: ../signup.php?error=sqlerror&fn=".$firstname."&ln=".$lastname."&uid=".$username."&cn=".$coursename."&cid=".$classid);
             exit();
         }
         else {
@@ -52,7 +48,7 @@ if(isset($_POST['signup-submit'])) {
             mysqli_stmt_store_result($stmt);
             $resultCheck = mysqli_stmt_num_rows($stmt);
             if ($resultCheck > 0) {
-                header("Location: ../signup.php?error=usertaken&fn=".$firstname."&ln=".$lastname."&uid=".$username."&cn=".$coursename);
+                header("Location: ../signup.php?error=usertaken&fn=".$firstname."&ln=".$lastname."&uid=".$username."&cn=".$coursename."&cid=".$classid);
                 exit();
             }
 
@@ -63,7 +59,7 @@ if(isset($_POST['signup-submit'])) {
                     $sql = "SELECT * FROM teachers WHERE classId=?";
                     $stmt = mysqli_stmt_init($conn);
                     if (!mysqli_stmt_prepare($stmt, $sql)) {
-                        header("Location: ../signup.php?error=sqlerror&fn=".$firstname."&ln=".$lastname."&uid=".$username."&cn=".$coursename);
+                        header("Location: ../signup.php?error=sqlerror&fn=".$firstname."&ln=".$lastname."&uid=".$username."&cn=".$coursename."&cid=".$classid);
                         exit();
                     } else {
                         mysqli_stmt_bind_param($stmt, "i", $classid);
@@ -73,7 +69,7 @@ if(isset($_POST['signup-submit'])) {
                             // if so, get courseName from teacher's table entry
                             $coursename = $row['courseName'];
                         } else {
-                            header("Location: ../signup.php?error=invalidcid&fn=".$firstname."&ln=".$lastname."&uid=".$username."&cn=".$coursename);
+                            header("Location: ../signup.php?error=invalidcid&fn=".$firstname."&ln=".$lastname."&uid=".$username."&cn=".$coursename."&cid=".$classid);
                             exit();
                         }
                     }
@@ -86,7 +82,7 @@ if(isset($_POST['signup-submit'])) {
                 }
                 $stmt = mysqli_stmt_init($conn);
                 if (!mysqli_stmt_prepare($stmt, $sql)) {
-                    header("Location: ../signup.php?error=sqlerror&fn=".$firstname."&ln=".$lastname."&uid=".$username."&cn=".$coursename);
+                    header("Location: ../signup.php?error=sqlerror&fn=".$firstname."&ln=".$lastname."&uid=".$username."&cn=".$coursename."&cid=".$classid);
                     exit();
                 }
                 else{
