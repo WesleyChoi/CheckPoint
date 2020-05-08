@@ -9,6 +9,15 @@ a{
     color: purple;
 }
 
+#intro{
+    width: 70%;
+    text-align: center;
+    position: relative;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #frm{
     border: solid gray 1px;
     color: black;
