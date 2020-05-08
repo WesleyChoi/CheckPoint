@@ -1,7 +1,6 @@
 <?php
     require "header.php";
-?>
-<?php 
+    
     // initialize errors variable
 	$errors = "";
 
