@@ -43,15 +43,13 @@
 ?>
 
 <body>
-    <div id="announcement">
-        <?php 
-        if (isset($_GET['task_deleted'])) {
-            echo '<t>You deleted a task.</t><br>';
-        } else if (isset($_GET['login']) || isset($_GET['signup'])) {
-            echo '<t>This is the home page for teachers to access</t><br>';
-        }
-        ?>
-    </div> 
+    <?php 
+    if (isset($_GET['task_deleted'])) {
+        echo '<div id="announcement"><t>You deleted a task.</t><br></div>';
+    } else if (isset($_GET['login']) || isset($_GET['signup'])) {
+        echo '<div id="announcement"><t>This is the home page for teachers to access</t><br></div>';
+    }
+    ?>
     <div id="container">
         <?php
             if (isset($_SESSION['userUid'])) {
