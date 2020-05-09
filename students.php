@@ -22,7 +22,7 @@
         <?php 
         if (isset($_GET['task_completed'])) {
             echo '<t>Congratulations! You completed a task!</t><br>';
-        } else if (isset($_GET['login'])) {
+        } else if (isset($_GET['login']) || isset($_GET['signup'])) {
             echo '<t>This is the home page for students to access</t><br>';
         }
         ?>
