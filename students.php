@@ -1,16 +1,31 @@
 <?php
     require "header.php";
+    require "includes/dbh.inc.php";
     
-    // initialize errors variable
-	$errors = "";
+    // mark task as completed
+    if (isset($_GET['comp_task'])) {
+        $task_del = $_GET['comp_task'];
+        
+        // we'll need to update the student's point column
+        /* insert code
+        here */
 
-	// connect to database
-	$db = mysqli_connect("localhost", "root", "", "todo");
+
+        /* how do we remove or indicate that this task is completed on the student's account
+        without deleting it from the tasks table??? */
+        header('Location: students.php?task_completed=y');
+    }
 ?>
 
 <body>
     <div id="announcement">
-        <t>This is the home page for students to access</t><br>
+        <?php 
+        if (isset($_GET['task_completed'])) {
+            echo '<t>Congratulations! You completed a task!</t><br>';
+        } else if (isset($_GET['login'])) {
+            echo '<t>This is the home page for students to access</t><br>';
+        }
+        ?>
     </div>
     <div id="container">
         <?php
@@ -24,30 +39,45 @@
         ?>
     </div>
     <div id="tasklist">
-            <table>
-                <thread>
+        <h2><?php echo $_SESSION['courseName']?> Task List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th id="itemclmn">Number</th>
+                    <th id="itemclmn">Task Name</th>
+                    <th id="itemclmn">Task Description</th>
+                    <th id="itemclmn">Point Value</th>
+                    <th id="itemclmn">I've Completed This Task</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <?php 
+                $sql = "SELECT * FROM tasks WHERE classId=?;";
+                $stmt = mysqli_stmt_init($conn);
+                if (!mysqli_stmt_prepare($stmt, $sql)) {
+                    header("Location: ../students.php?error=sqlerror");
+                    exit();
+                }
+                else {
+                    mysqli_stmt_bind_param($stmt, "i", $_SESSION['classId']);
+                    mysqli_stmt_execute($stmt);
+                    $result = mysqli_stmt_get_result($stmt);
+                }
+
+                    $i = 1; while ($row = mysqli_fetch_array($result)) { ?>
                     <tr>
-                        <th>Tasks</th>
-                        <th>Description</th>
-                        <th>Task Value</th>
+                        <td> <?php echo $i; ?> </td>
+                        <td class="task"> <?php echo $row['task']; ?> </td>
+                        <td class="task"> <?php echo $row['taskabout']; ?> </td>
+                        <td class="task"> <?php echo $row['taskvalue']; ?> </td>
+                        <td class="completed"> 
+                            <a href="students.php?comp_task=<?php echo $row['task'] ?>">o</a> 
+                        </td>
                     </tr>
-                </thread>
-
-                <tbody>
-                    <?php
-
-                        $tasks = mysqli_query($db, "SELECT * FROM tasks");
-
-                        $i = 1; while($row = mysqli_fetch_array($tasks)) { ?>
-                            <td class="task_input"> <?php echo $row['taskname']; ?> </td>
-                            <td class="task_about"> <?php echo $row['taskabout']; ?> </td>
-                            <td class="task_value"> <?php echo $row['taskvalue']; ?> </td>
-                            <td class="delete"> 
-                                <a href="index.php?del_task=<?php echo $row['id'] ?>">x</a> 
-                            </td>
-                            <?php $i++; } ?>
-                </tbody>
-            </table>
+                    <?php $i++; } ?>
+            </tbody>
+        </table>
     </div>
 </body>
 <?php

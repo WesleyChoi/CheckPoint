@@ -37,12 +37,16 @@
             mysqli_stmt_execute($stmt);
         }
         header('Location: teachers.php?task_deleted');
+    } else if (isset($_GET['task_deleted'])) {
+        $msg = "Task deleted!";
     }
 ?>
 
 <body>
     <div id="announcement">
         <t>This is the home page for teachers to access.</t><br>
+    </div> 
+    <div id="container">
         <?php
             if (isset($_SESSION['userUid'])) {
                 echo 'Welcome to Checkpoint, ' . $_SESSION['userFn'];
@@ -51,7 +55,7 @@
                 echo 'You are not logged in!';
             }
         ?>
-    </div> 
+    </div>
     
     <!--User Input-->
     <div id="frm">
