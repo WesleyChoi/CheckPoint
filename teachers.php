@@ -7,6 +7,25 @@
         $task = $_POST['task'];
         $taskabout = $_POST['taskabout'];
         $taskvalue = $_POST['taskvalue'];
+
+        // check if task name is already taken
+        $sql = "SELECT task FROM tasks WHERE task=?";
+        $stmt = mysqli_stmt_init($conn);
+        if (!mysqli_stmt_prepare($stmt, $sql)) {
+            header("Location: teachers.php?error=sqlerror");
+            exit();
+        }
+        else {
+            mysqli_stmt_bind_param($stmt, "s", $task);
+            mysqli_stmt_execute($stmt);
+            mysqli_stmt_store_result($stmt);
+            $resultCheck = mysqli_stmt_num_rows($stmt);
+            if ($resultCheck > 0) {
+                header("Location: teachers.php?error=tasktaken");
+                exit();
+            }
+        }
+
 		$sql = "INSERT INTO tasks (classId, task, taskabout, taskvalue) VALUES (?, ?, ?, ?)";
         //mysqli_query($conn, $sql);
         $stmt = mysqli_stmt_init($conn); // new sqli statement
@@ -66,8 +85,9 @@
         <h2>Set a Task</h2>
         <form method="post" action="teachers.php" class="input_form">
             <?php 
-                if (isset($errors)) { 
-                    echo '<p>'.$errors.'</p>';
+                 if (isset($_GET['error'])) {
+                    if ($_GET['error'] == "tasktaken")
+                    echo '<t style="color: red;">Please enter a unique task name.</t><br>';
                 }
             ?>
 
