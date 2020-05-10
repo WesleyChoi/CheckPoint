@@ -3,6 +3,7 @@ body{
     color: black;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
+    padding-bottom: 70px;
 }
 
 a{
@@ -26,8 +27,22 @@ h2{
 #frm{
     border: solid darkslategrey 2px;
     color: black;
+    width: 30%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: rgb(245, 249, 250);
+    padding: 30px;
+}
+
+.taskfrm{
+    border: solid darkslategrey 2px;
+    color: black;
     width: 20%;
-    margin: 100px auto;
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     background: rgb(245, 249, 250);
     padding: 30px;
 }
@@ -35,16 +50,19 @@ h2{
 #tasklist{
     border: solid darkslategrey 2px;
     color: black;
-    width: 70%;
-    margin: 100px auto;
+    width: 60%;
+    float: right;
+    margin-right: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     background: rgb(245, 249, 250);
     padding: 30px;
 }
 
 button{
-    color: #fff;
+    color: black;
     text-transform: uppercase;
-    border: solid darkslategrey 3px;
+    border: solid darkslategrey 2px;
     padding: 10px 15px 10px 15px;
     margin-left: 69%;
 }
@@ -53,6 +71,7 @@ button{
     color: black;
     text-transform: uppercase;
     font-size: 13px;
+    margin: auto;
     font-weight: 7px;
     border-radius: 10px;
     width: 80%;
@@ -68,6 +87,7 @@ button{
     font-size: 13px;
     font-weight: 7px;
     margin-top: 10px;
+    margin: auto;
     text-transform: uppercase;
     width: 80%;
     text-align: center;

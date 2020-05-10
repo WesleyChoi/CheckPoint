@@ -81,7 +81,7 @@
     </div>
     
     <!--User Input-->
-    <div id="frm">
+    <div class="taskfrm">
         <h2>Set a Task</h2>
         <form method="post" action="teachers.php" class="input_form">
             <?php 
