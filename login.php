@@ -20,16 +20,16 @@
                     }
                 }
             ?>
+            <div class="input-form">
+                <input type="text" name="uid" class="task_about" placeholder="Task Description" value="<?php echo isset($_GET['uid']) ? $_GET['uid']: ''?>" required/>
+                <label for="task_about">Username</label>
+            </div>
+            <div class="input-form">
+                <input type="password" name="pwd" class="pwd" placeholder="Task Description" required>
+                <label for="pwd">Password</label>
+            </div>
             <p>
-                <label>Username </label>
-                <input type="text" name="uid" value="<?php echo isset($_GET['uid']) ? $_GET['uid']: ''?>" required    />
-            </p>
-            <p>
-                <label>Password </label>
-                <input type="password" name="pwd" required   />
-            </p>
-            <p>
-                <label>Student </label>
+                <label>Student</label>
                 <input type="radio" name="acctype" value="student"   />
             </p>
             <p>

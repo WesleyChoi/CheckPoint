@@ -6,7 +6,7 @@
     <main>
         <div class="wrapper-main" id="frm">
             <section class="section-default">
-                <text>Signup</text>
+                <h1>Signup</h1>
                 <form class="form-signup" action="includes/signup.inc.php" method="POST">
                 <!-- note that there are no id's for username, password, and repeat password -->
                     <?php
@@ -28,35 +28,41 @@
                             }
                         }
                     ?>
-                    <p>
-                        <label>First Name </label>
-                        <input type="text" name="fn" value="<?php echo isset($_GET['fn']) ? $_GET['fn']: ''?>" required    />
-                    </p>
-                    <p>
-                        <label>Last Name </label>
-                        <input type="text" name="ln" value="<?php echo isset($_GET['ln']) ? $_GET['ln']: ''?>" required    />
-                    </p>
-                    <p>
-                        <label>Username </label>
-                        <input type="text" name="uid" value="<?php echo isset($_GET['uid']) ? $_GET['uid']: ''?>" required   />
-                    </p>
-                    <p>
-                        <label>Password  </label>
-                        <input type="password" name="pwd" required    />
-                    </p>
-                    <p>
-                        <label>Repeat Password </label>
-                        <input type="password" name="pwd-repeat" required   />
-                    </p>
+                    <div class="input-form">
+                        <input type="text" name="fn" class="first_name" placeholder="Task Description" value="<?php echo isset($_GET['fn']) ? $_GET['fn']: ''?>" required   ><br>
+                        <label for="first_name">First Name </label>
+                    </div>
+                    <div class="input-form">
+                        <input type="text" name="ln" class="last_name" placeholder="Task Description" value="<?php echo isset($_GET['ln']) ? $_GET['ln']: ''?>" required    ><br>
+                        <label for="last_name">Last Name </label>
+                    </div>
+                    <div class="input-form">
+                        <input type="text" name="uid" class="user_name" placeholder="Task Description" value="<?php echo isset($_GET['uid']) ? $_GET['uid']: ''?>" required  ><br>
+                        <label for="user_name">Username </label>
+                    </div>
+                    <div class="input-form">
+                        <input type="password" name="pwd" class="password" required  ><br>
+                        <label for="password">Password </label>
+                    </div>
+                    <div class="input-form">
+                        <input type="password" name="pwd-repeat" class="password-rpt" required  ><br>
+                        <label for="password-rpt">Repeat Password </label>
+                    </div>
                     <p>
                         <label>Student </label>
                         <input type="radio" name="acctype" value="student"   /><br>
-                        <input type="text" name="cid" value="<?php echo isset($_GET['cid']) ? $_GET['cid']: ''?>" placeholder="Enter Class ID"    />
+                        <div class="input-form">
+                            <input type="text" name="cid" class="cid" value="<?php echo isset($_GET['cid']) ? $_GET['cid']: ''?>" placeholder="Enter Class ID"    required  ><br>
+                            <label for="cid">Enter Class ID </label>
+                        </div>
                     </p>
                     <p>
                         <label>Teacher </label>
                         <input type="radio" name="acctype" value="teacher"  /><br>
-                        <input type="text" name="cn" value="<?php echo isset($_GET['cn']) ? $_GET['cn']: ''?>" placeholder="Enter Course Name"   />
+                        <div class="input-form">
+                            <input type="text" name="cn" class="cn" value="<?php echo isset($_GET['cn']) ? $_GET['cn']: ''?>" placeholder="Enter Course Name"    required  ><br>
+                            <label for="cn">Enter Course Name </label>
+                        </div>
                     </p>
                     <button type="submit" name="signup-submit">Signup</button>
                 </form>

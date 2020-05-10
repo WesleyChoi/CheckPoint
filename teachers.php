@@ -90,10 +90,18 @@
                     echo '<t style="color: red;">Please enter a unique task name.</t><br>';
                 }
             ?>
-
-            <input type="text" name="task" class="task_input" placeholder="Task Name" required><br>
-            <input type="text" name="taskabout" class="task_about" placeholder="Task Description"><br>
-            <input type="text" name="taskvalue" class="task_value" placeholder="Worth How Many Points" required><br>
+            <div class="input-form">
+                <input type="text" name="task" class="task_input" placeholder="Task Name"    required  ><br>
+                <label for="cn">Enter Course Name </label>
+            </div>
+            <div class="input-form">
+                <input type="text" name="taskabout" class="task_about" placeholder="Task Description"    required  ><br>
+                <label for="task_about">Enter Task Description </label>
+            </div>
+            <div class="input-form">
+                <input type="text" name="taskvalue" class="task_value" placeholder="Worth How Many Points"  required  ><br>
+                <label for="task_value">Enter Task Value </label>
+            </div>
             <button type="submit" name="submit" id="add_btn" class="add_btn">Add Task</button>
         </form>
     </div>
