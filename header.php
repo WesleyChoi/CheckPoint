@@ -15,6 +15,7 @@
 	<nav class="nav-header-main">
 		<ul>
 			<li><a href="index.php">Home</a></li>
+			<li><a href="gstarted.php">Getting Started</a></li>
 			<li><a href="aboutus.php">About Us</a></li>
 			<li><a href="feedback.php">Feedback</a></li>
 			<?php
