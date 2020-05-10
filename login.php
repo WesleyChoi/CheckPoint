@@ -4,7 +4,7 @@
 <body>
     <div id="frm" class="container">
         <form action="includes/login.inc.php" method="POST">
-            <text>LOGIN</text>
+            <h2>LOGIN</h2>
             <?php
                 if (isset($_GET['error'])) {
                     if ($_GET['error'] == "emptyfields") {

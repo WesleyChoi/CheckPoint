@@ -6,7 +6,7 @@
     <main>
         <div class="wrapper-main" id="frm">
             <section class="section-default">
-                <h1>Signup</h1>
+                <h2>Signup</h2>
                 <form class="form-signup" action="includes/signup.inc.php" method="POST">
                 <!-- note that there are no id's for username, password, and repeat password -->
                     <?php

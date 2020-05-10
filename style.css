@@ -6,7 +6,12 @@ body{
 }
 
 a{
-    color: purple;
+    color: rgb(58, 6, 110);
+}
+
+h2{
+    font-family: 'Barlow', sans-serif;
+    text-transform: uppercase;
 }
 
 #intro{
@@ -19,47 +24,53 @@ a{
 }
 
 #frm{
-    border: solid gray 1px;
+    border: solid darkslategrey 2px;
     color: black;
     width: 20%;
-    border-radius: 5px;
     margin: 100px auto;
-    background: rgb(227, 241, 233);
+    background: rgb(245, 249, 250);
     padding: 30px;
 }
 
 #tasklist{
-    border: solid gray 1px;
+    border: solid darkslategrey 2px;
     color: black;
     width: 70%;
-    border-radius: 5px;
     margin: 100px auto;
-    background: rgb(227, 241, 233);
+    background: rgb(245, 249, 250);
     padding: 30px;
 }
 
 button{
     color: #fff;
-    background: #31857e;
-    padding: 5px;
+    text-transform: uppercase;
+    border: solid darkslategrey 3px;
+    padding: 10px 15px 10px 15px;
     margin-left: 69%;
 }
 
 #announcement{
     color: black;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 7px;
+    border-radius: 10px;
+    width: 80%;
     background: rgb(244, 246, 247);
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 5px;
-    border: solid gray 1px;
-    border-radius: 5px;
 }
 
 #container{
     background: rgb(227, 239, 243);
-    border: solid gray 1px;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 7px;
     margin-top: 10px;
+    text-transform: uppercase;
+    width: 80%;
+    text-align: center;
     padding: 10px;
 }
 
@@ -91,6 +102,7 @@ button{
 }
 
 #title{
+    font-family: 'Barlow', sans-serif;
     float: left;
     margin-left: 30px;
 }
@@ -165,8 +177,9 @@ button{
 }
 
 #itemclmn{
-    color: red;
+    color: #31857e;
     width: 10%;
+    text-transform: uppercase;
 }
 
 

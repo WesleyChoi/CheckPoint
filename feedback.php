@@ -6,6 +6,7 @@
         <t>Want to contact us, send feedback, or learn more? Feel free to fill out the form below!</t><br>
     </div>
     <div id="frm">
+        <h2>FEEDBACK</h2>
         <form action="includes/feedback.inc.php" method="post">
             <p>
                 <label>Name </label>
