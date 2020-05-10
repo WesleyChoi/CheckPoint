@@ -1,4 +1,4 @@
-# checkpoint
+# CheckPoint
 Hello!
 
 CheckPoint is an enhanced to-do list meant to improve productivity in students to get them more habituated with scheduling. By creating a rewards system, an incentive to complete tasks and keeping track of what needs to be done is engrained in students.
