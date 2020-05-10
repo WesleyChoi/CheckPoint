@@ -8,18 +8,18 @@
     <div id="frm">
         <h2>FEEDBACK</h2>
         <form action="includes/feedback.inc.php" method="post">
-            <p>
-                <label>Name </label>
-                <input type="text" name="name" placeholder="Your Name" required/>
-            </p>
-            <p>
-                <label>Email </label>
-                <input type="email" name="email" placeholder="Your Email" required/>
-            </p>
-            <p>
-                <label>Message </label>
-                <textarea name="message" placeholder="Write Message..." required></textarea>
-            </p>
+            <div class="input-form">
+                <input type="text" name="name" class="task_about" placeholder="Your Name" required/>
+                <label for="task_about">Name</label>
+            </div>
+            <div class="input-form">
+                <input type="email" name="email" class="task_about" placeholder="Email" required/>
+                <label for="task_about">Email</label>
+            </div>
+            <div class="input-form">
+                <input type="textarea" name="message" class="task_about" placeholder="Write Message..." required/>
+                <label for="task_about">Write Message...</label>
+            </div>
             <p>
                 <button type="submit" name="submit">Submit Message</button>
             </p>
