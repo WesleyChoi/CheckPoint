@@ -293,10 +293,20 @@ input::placeholder {
 }
 
 button{
-    color: #fff;
+    color: black;
     text-transform: uppercase;
-    border: solid darkslategrey 3px;
-    padding: 10px 15px 10px 15px;
+    border: solid darkslategrey 2px;
+    padding: 10px 17px 10px 17px;
+    margin-left: 69%;
+    transition-duration: all ease-in-out 300ms;
+}
+
+button:hover{
+    color: black;
+    text-transform: uppercase;
+    background: rgb(223, 223, 223);
+    border: solid darkslategrey 2px;
+    padding: 10px 17px 10px 17px;
     margin-left: 69%;
 }
 
