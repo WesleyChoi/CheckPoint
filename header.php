@@ -10,7 +10,7 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
-	<link rel='shortcut icon' href='includes/favicon.png' type='image/png'>
+	<link rel='shortcut icon' href='images/favicon.png' type='image/png'>
 </head>
 <div id="header"> 
 	<a id="title" href=index.php style="color: black; text-decoration: none;"><h1>CHECKPOINT</h1></a>

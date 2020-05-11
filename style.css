@@ -47,6 +47,17 @@ h2{
     padding: 30px;
 }
 
+#studenttasklist{
+    border: solid darkslategrey 2px;
+    color: black;
+    width: 60%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: rgb(245, 249, 250);
+    padding: 30px;
+}
+
 #tasklist{
     border: solid darkslategrey 2px;
     color: black;
