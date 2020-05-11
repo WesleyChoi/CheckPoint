@@ -3,6 +3,7 @@ body{
     color: black;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
+    padding-bottom: 70px;
 }
 
 a{
@@ -23,10 +24,68 @@ h2{
     margin-right: auto;
 }
 
+<<<<<<< HEAD
+=======
+#frm{
+    border: solid darkslategrey 2px;
+    color: black;
+    width: 30%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: rgb(245, 249, 250);
+    padding: 30px;
+}
+
+.taskfrm{
+    border: solid darkslategrey 2px;
+    color: black;
+    width: 20%;
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: rgb(245, 249, 250);
+    padding: 30px;
+}
+
+#studenttasklist{
+    border: solid darkslategrey 2px;
+    color: black;
+    width: 60%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: rgb(245, 249, 250);
+    padding: 30px;
+}
+
+#tasklist{
+    border: solid darkslategrey 2px;
+    color: black;
+    width: 60%;
+    float: right;
+    margin-right: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: rgb(245, 249, 250);
+    padding: 30px;
+}
+
+button{
+    color: black;
+    text-transform: uppercase;
+    border: solid darkslategrey 2px;
+    padding: 10px 15px 10px 15px;
+    margin-left: 69%;
+}
+
+>>>>>>> 08daca3b8b3dc7d67282f1221360d2f7abc2f645
 #announcement{
     color: black;
     text-transform: uppercase;
     font-size: 13px;
+    margin: auto;
     font-weight: 7px;
     border-radius: 10px;
     width: 80%;
@@ -41,10 +100,11 @@ h2{
     border-radius: 10px;
     font-size: 13px;
     font-weight: 7px;
+    margin: auto;
     margin-top: 10px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     width: 80%;
-    text-align: center;
     padding: 10px;
 }
 

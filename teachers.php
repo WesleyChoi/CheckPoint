@@ -81,7 +81,7 @@
     </div>
     
     <!--User Input-->
-    <div id="frm">
+    <div class="taskfrm">
         <h2>Set a Task</h2>
         <form method="post" action="teachers.php" class="input_form">
             <?php 
@@ -92,7 +92,7 @@
             ?>
             <div class="input-form">
                 <input type="text" name="task" class="task_input" placeholder="Task Name"    required  ><br>
-                <label for="cn">Enter Course Name </label>
+                <label for="cn">Enter Task Name </label>
             </div>
             <div class="input-form">
                 <input type="text" name="taskabout" class="task_about" placeholder="Task Description"    required  ><br>
@@ -112,9 +112,9 @@
         <table>
             <thead>
                 <tr>
-                    <th id="itemclmn">Number</th>
-                    <th id="itemclmn">Task Name</th>
-                    <th id="itemclmn">Task Description</th>
+                    <th id="itemclmn"></th>
+                    <th id="itemclmn">Name</th>
+                    <th id="itemclmn">Description</th>
                     <th id="itemclmn">Point Value</th>
                     <th id="itemclmn">Delete Task</th>
                 </tr>
