@@ -86,11 +86,11 @@ button{
     border-radius: 10px;
     font-size: 13px;
     font-weight: 7px;
-    margin-top: 10px;
     margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     width: 80%;
-    text-align: center;
     padding: 10px;
 }
 

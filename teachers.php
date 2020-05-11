@@ -92,7 +92,7 @@
             ?>
             <div class="input-form">
                 <input type="text" name="task" class="task_input" placeholder="Task Name"    required  ><br>
-                <label for="cn">Enter Course Name </label>
+                <label for="cn">Enter Task Name </label>
             </div>
             <div class="input-form">
                 <input type="text" name="taskabout" class="task_about" placeholder="Task Description"    required  ><br>
