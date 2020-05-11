@@ -23,32 +23,6 @@ h2{
     margin-right: auto;
 }
 
-#frm{
-    border: solid darkslategrey 2px;
-    color: black;
-    width: 20%;
-    margin: 100px auto;
-    background: rgb(245, 249, 250);
-    padding: 30px;
-}
-
-#tasklist{
-    border: solid darkslategrey 2px;
-    color: black;
-    width: 70%;
-    margin: 100px auto;
-    background: rgb(245, 249, 250);
-    padding: 30px;
-}
-
-button{
-    color: #fff;
-    text-transform: uppercase;
-    border: solid darkslategrey 3px;
-    padding: 10px 15px 10px 15px;
-    margin-left: 69%;
-}
-
 #announcement{
     color: black;
     text-transform: uppercase;
@@ -73,6 +47,8 @@ button{
     text-align: center;
     padding: 10px;
 }
+
+/* HEADER STYLE */
 
 #header{
     background: rgb(233, 240, 252);
@@ -158,6 +134,17 @@ button{
     color: red;
 }
 
+/* FORM STYLE */
+
+#frm{
+    border: solid darkslategrey 2px;
+    color: black;
+    width: 20%;
+    margin: 100px auto;
+    background: rgb(245, 249, 250);
+    padding: 30px;
+}
+
 #include{
     text-align: center;
     position: relative;
@@ -228,3 +215,22 @@ input {
 input::placeholder {
     opacity: 0;
 }
+
+#tasklist{
+    border: solid darkslategrey 2px;
+    color: black;
+    width: 70%;
+    margin: 100px auto;
+    background: rgb(245, 249, 250);
+    padding: 30px;
+}
+
+button{
+    color: #fff;
+    text-transform: uppercase;
+    border: solid darkslategrey 3px;
+    padding: 10px 15px 10px 15px;
+    margin-left: 69%;
+}
+
+
