@@ -3,9 +3,9 @@
 ?>
     <body>
         <div id="container">
-            <h1>Profile<h1>
-            <p>Name: <?php echo $_SESSION['userFn'].' '.$_SESSION['userLn']; ?></p>
-            <p>Account Type: <?php echo $_SESSION['accType']; ?></p>
+            <h2>Profile<h2>
+            <t>Name: <?php echo $_SESSION['userFn'].' '.$_SESSION['userLn']; ?></t><br>
+            <t>Account Type: <?php echo $_SESSION['accType']; ?></t><br>
         </div>
     </body>
 <?php

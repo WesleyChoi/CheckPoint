@@ -38,16 +38,16 @@
             }
         ?>
     </div>
-    <div id="tasklist">
+    <div id="studenttasklist">
         <h2><?php echo $_SESSION['courseName']?> Task List</h2>
         <table>
             <thead>
                 <tr>
-                    <th id="itemclmn">Number</th>
-                    <th id="itemclmn">Task Name</th>
-                    <th id="itemclmn">Task Description</th>
+                    <th id="itemclmn"></th>
+                    <th id="itemclmn">Name</th>
+                    <th id="itemclmn">Description</th>
                     <th id="itemclmn">Point Value</th>
-                    <th id="itemclmn">I've Completed This Task</th>
+                    <th id="itemclmn"></th>
                 </tr>
             </thead>
 
@@ -72,7 +72,7 @@
                         <td class="task"> <?php echo $row['taskabout']; ?> </td>
                         <td class="task"> <?php echo $row['taskvalue']; ?> </td>
                         <td class="completed"> 
-                            <a href="students.php?comp_task=<?php echo $row['task'] ?>">o</a> 
+                            <a href="students.php?comp_task=<?php echo $row['task'] ?>"><img style="width: 18px; height: 18px;" src="images/empty_checkbox.png"></a> 
                         </td>
                     </tr>
                     <?php $i++; } ?>
