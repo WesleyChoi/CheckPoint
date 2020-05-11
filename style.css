@@ -24,8 +24,6 @@ h2{
     margin-right: auto;
 }
 
-<<<<<<< HEAD
-=======
 #frm{
     border: solid darkslategrey 2px;
     color: black;
@@ -80,7 +78,6 @@ button{
     margin-left: 69%;
 }
 
->>>>>>> 08daca3b8b3dc7d67282f1221360d2f7abc2f645
 #announcement{
     color: black;
     text-transform: uppercase;
@@ -106,6 +103,16 @@ button{
     text-transform: uppercase;
     width: 80%;
     padding: 10px;
+}
+
+#gstarted{
+    background: rgb(227, 239, 243);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: initial;
 }
 
 /* HEADER STYLE */
