@@ -43,11 +43,11 @@
         <table>
             <thead>
                 <tr>
-                    <th id="itemclmn">Number</th>
-                    <th id="itemclmn">Task Name</th>
-                    <th id="itemclmn">Task Description</th>
+                    <th id="itemclmn"></th>
+                    <th id="itemclmn">Name</th>
+                    <th id="itemclmn">Description</th>
                     <th id="itemclmn">Point Value</th>
-                    <th id="itemclmn">I've Completed This Task</th>
+                    <th id="itemclmn"></th>
                 </tr>
             </thead>
 

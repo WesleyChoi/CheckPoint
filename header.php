@@ -13,7 +13,8 @@
 	<link rel='shortcut icon' href='images/favicon.png' type='image/png'>
 </head>
 <div id="header"> 
-	<a id="title" href=index.php style="color: black; text-decoration: none;"><h1>CHECKPOINT</h1></a>
+	<a id="title" href=index.php><img src="images/favicon.png" style="width: 40px; height: 40px;"></a>
+	<h1 style="margin-left: 60px; display: inline;">CHECKPOINT</h1>
 	<nav class="nav-header-main">
 		<ul>
 			<li><a href="index.php">Home</a></li>

@@ -112,9 +112,9 @@
         <table>
             <thead>
                 <tr>
-                    <th id="itemclmn">Number</th>
-                    <th id="itemclmn">Task Name</th>
-                    <th id="itemclmn">Task Description</th>
+                    <th id="itemclmn"></th>
+                    <th id="itemclmn">Name</th>
+                    <th id="itemclmn">Description</th>
                     <th id="itemclmn">Point Value</th>
                     <th id="itemclmn">Delete Task</th>
                 </tr>
