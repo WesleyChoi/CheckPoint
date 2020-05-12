@@ -24,52 +24,6 @@ h2{
     margin-right: auto;
 }
 
-#frm{
-    border: solid darkslategrey 2px;
-    color: black;
-    width: 30%;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background: rgb(245, 249, 250);
-    padding: 30px;
-}
-
-.taskfrm{
-    border: solid darkslategrey 2px;
-    color: black;
-    width: 20%;
-    float: left;
-    margin-left: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background: rgb(245, 249, 250);
-    padding: 30px;
-}
-
-#studenttasklist{
-    border: solid darkslategrey 2px;
-    color: black;
-    width: 60%;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background: rgb(245, 249, 250);
-    padding: 30px;
-}
-
-#tasklist{
-    border: solid darkslategrey 2px;
-    color: black;
-    width: 60%;
-    float: right;
-    margin-right: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background: rgb(245, 249, 250);
-    padding: 30px;
-}
-
 button{
     color: black;
     text-transform: uppercase;
@@ -234,8 +188,10 @@ button{
 #frm{
     border: solid darkslategrey 2px;
     color: black;
-    width: 20%;
-    margin: 100px auto;
+    width: 30%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
     background: rgb(245, 249, 250);
     padding: 30px;
 }
@@ -311,20 +267,56 @@ input::placeholder {
     opacity: 0;
 }
 
+.taskfrm{
+    border: solid darkslategrey 2px;
+    color: black;
+    width: 20%;
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: rgb(245, 249, 250);
+    padding: 30px;
+}
+
+#studenttasklist{
+    border: solid darkslategrey 2px;
+    color: black;
+    width: 60%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: rgb(245, 249, 250);
+    padding: 30px;
+}
+
 #tasklist{
     border: solid darkslategrey 2px;
     color: black;
-    width: 70%;
-    margin: 100px auto;
+    width: 60%;
+    float: right;
+    margin-right: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     background: rgb(245, 249, 250);
     padding: 30px;
 }
 
 button{
-    color: #fff;
+    color: black;
     text-transform: uppercase;
-    border: solid darkslategrey 3px;
-    padding: 10px 15px 10px 15px;
+    border: solid darkslategrey 2px;
+    padding: 10px 17px 10px 17px;
+    margin-left: 69%;
+    transition-duration: all ease-in-out 300ms;
+}
+
+button:hover{
+    color: black;
+    text-transform: uppercase;
+    background: rgb(223, 223, 223);
+    border: solid darkslategrey 2px;
+    padding: 10px 17px 10px 17px;
     margin-left: 69%;
 }
 
