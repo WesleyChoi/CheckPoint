@@ -165,7 +165,7 @@ button{
 }
 
 .nav-header-main a:hover {
-    color: rgb(18, 84, 110);
+    color: rgb(18, 50, 110);
 }
 
 .nav-header-main li {
@@ -173,6 +173,34 @@ button{
     margin-left: 40px;
     padding-top: 15px;
     position: relative;
+}
+
+.nav li{
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.dropdown{
+    position: absolute;
+    color: rgb(18, 50, 110);
+}
+
+.dropdown-content{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    text-align: center;
+    display: none;
+}
+.dropdown-content li{
+    background-color: #9e9e9e;
+    width: 100%
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
 }
 
 #footer{

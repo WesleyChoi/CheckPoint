@@ -18,9 +18,13 @@
 	<nav class="nav-header-main">
 		<ul>
 			<li><a href="index.php">Home</a></li>
-			<li><a href="gstarted.php">Getting Started</a></li>
-			<li><a href="aboutus.php">About Us</a></li>
-			<li><a href="feedback.php">Feedback</a></li>
+			<li class="dropdown">ABOUT
+				<ul class="dropdown-content">
+					<li><a href="gstarted.php">Getting Started</a></li>
+					<li><a href="aboutus.php">About Us</a></li>
+					<li><a href="feedback.php">Feedback</a></li>
+				</ul>
+			</li>
 			<?php
 				if (isset($_SESSION['userUid'])) {
 					if ($_SESSION['accType'] = "student") {
