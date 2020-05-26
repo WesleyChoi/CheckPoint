@@ -28,14 +28,14 @@
                 <input type="password" name="pwd" class="pwd" placeholder="Task Description" required>
                 <label for="pwd">Password</label>
             </div>
-            <p>
+            <div id="radioinput">
                 <label>Student</label>
                 <input type="radio" name="acctype" value="student"   />
-            </p>
-            <p>
+            </div>
+            <div id="radioinput">
                 <label>Teacher </label>
                 <input type="radio" name="acctype" value="teacher"   />
-            </p>
+            </div>
             <p>
                 <button type="submit" name="login-submit">Login</button>
             </p>
