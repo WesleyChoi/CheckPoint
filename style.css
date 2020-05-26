@@ -75,6 +75,10 @@ button{
     background: rgb(233, 240, 252);
 }
 
+#header #website-title{
+    float: left;
+}
+
 #header::after {
     content: '';
     display: table;
@@ -106,8 +110,9 @@ button{
 
 .nav-header-main ul {
     margin: 0;
+    top: 0;
     margin-right: 70px;
-    padding: 0;
+    padding: 20px;
     list-style: none;
     float: right;
 }

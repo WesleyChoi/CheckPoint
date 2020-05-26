@@ -12,9 +12,11 @@
 	<link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
 	<link rel='shortcut icon' href='images/favicon.png' type='image/png'>
 </head>
-<div id="header"> 
-	<a id="title" href=index.php><img src="images/favicon.png" style="width: 40px; height: 40px;"></a>
-	<h1 style="margin-left: 60px; display: inline;">CHECKPOINT</h1>
+<div id="header">
+	<div id="website-title">
+		<a href=index.php><img src="images/favicon.png" style="width: 40px; height: 40px;"></a>
+		<a href=index.php style="text-decoration: none;"><h1 style="text-align: left; display: inline; padding: 2px;">CHECKPOINT</h1></a>
+	</div>
 	<nav class="nav-header-main">
 		<ul>
 			<li><a href="index.php">Home</a></li>
