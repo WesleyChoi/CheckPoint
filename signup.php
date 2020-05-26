@@ -49,18 +49,22 @@
                         <label for="password-rpt">Repeat Password </label>
                     </div>
                     <p>
-                        <label>Student </label>
-                        <input type="radio" name="acctype" value="student"   /><br>
+                        <div id="radioinput">
+                            <label id="radioinput-label" for="signupstudent">I'm a student! </label>
+                            <input type="radio" name="acctype" value="student" id="signupstudent"   /><br>
+                        </div>
                         <div class="input-form">
-                            <input type="text" name="cid" class="cid" value="<?php echo isset($_GET['cid']) ? $_GET['cid']: ''?>" placeholder="Enter Class ID"    required  ><br>
+                            <input type="text" name="cid" class="cid" value="<?php echo isset($_GET['cid']) ? $_GET['cid']: ''?>" placeholder="Enter Class ID"      ><br>
                             <label for="cid">Enter Class ID </label>
                         </div>
                     </p>
                     <p>
-                        <label>Teacher </label>
-                        <input type="radio" name="acctype" value="teacher"  /><br>
+                        <div id="radioinput">
+                            <label id="radioinput-label" for="signupteacher">I'm a teacher! </label>
+                            <input type="radio" name="acctype" value="teacher" id="signupteacher"   /><br>
+                        </div>
                         <div class="input-form">
-                            <input type="text" name="cn" class="cn" value="<?php echo isset($_GET['cn']) ? $_GET['cn']: ''?>" placeholder="Enter Course Name"    required  ><br>
+                            <input type="text" name="cn" class="cn" value="<?php echo isset($_GET['cn']) ? $_GET['cn']: ''?>" placeholder="Enter Course Name"      ><br>
                             <label for="cn">Enter Course Name </label>
                         </div>
                     </p>
