@@ -14,8 +14,8 @@
 </head>
 <div id="header">
 	<div id="website-title">
-		<a href=index.php style="width: 0%; margin: 0 auto;"><img src="images/favicon.png" style="float: left; padding: 20px 0px 20px 20px; width: 60px; height: 60px;"></a>
-		<a href=index.php style="text-decoration: none; font-family: 'Roboto Mono', monospace;"><h1 style="float: right; color: black; padding: 20px 20px 20px 5px; font-size: 45px; margin: 0 auto;">CheckPoint</h1></a>
+		<a href=index.php style="width: 0%; margin: 0 auto;"><img src="images/favicon.png" style="float: left; padding: 0px 0px 0px 20px; width: 60px; height: 60px;"></a>
+		<a href=index.php style="text-decoration: none; font-family: 'Roboto Mono', monospace;"><h1 style="float: right; color: black; padding: 0px 20px 0px 5px; font-size: 45px; margin: 0 auto;">CheckPoint</h1></a>
 	</div>
 	<nav class="nav-header-main">
 		<ul>
