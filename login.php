@@ -29,11 +29,11 @@
                 <label for="pwd">Password</label>
             </div>
             <div id="radioinput">
-                <label>Student</label>
+                <label id="radioinput-label">Student</label>
                 <input type="radio" name="acctype" value="student"   />
             </div>
             <div id="radioinput">
-                <label>Teacher </label>
+                <label id="radioinput-label">Teacher</label>
                 <input type="radio" name="acctype" value="teacher"   />
             </div>
             <p>

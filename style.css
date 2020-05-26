@@ -342,5 +342,8 @@ button:hover{
 
 #radioinput{
     padding: 20px;
+}
 
+#radioinput-label{
+    padding: 12px 0px 0px 20px;
 }
