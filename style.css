@@ -106,11 +106,10 @@ button{
     width: 100%;
 }
 
-#title{
-    font-family: 'Barlow', sans-serif;
-    float: left;
-    margin-left: 30px;
+.dropdown-content a:hover::before {
+    width: 70%;
 }
+
 
 .nav-header-main ul {
     margin: 0;
@@ -135,6 +134,7 @@ button{
     display: inline-block;
     margin-left: 40px;
     padding-top: 15px;
+    padding-bottom: 15px;
     position: relative;
 }
 
@@ -147,6 +147,8 @@ button{
 .dropdown-content{
     color: rgb(18, 50, 110);
     position: absolute;
+    left: -7px;
+    margin: 0 auto;
     display: none;
     z-index: 1;
     box-shadow: 0px 8px 16px 0px rgb(0,0,0,0.2);
@@ -160,12 +162,12 @@ button{
 }
 
 .dropdown-content ul {
-	list-style: none;
-	margin: 0;
-	top: 0;
-	left: 100px;
-	padding: 20px;
-	float: center;
+    list-style: none;
+    margin: 0;
+    top: 0;
+    left: 100px;
+    padding: 20px;
+    float: center;
 }
 
 .dropdown-content li {
