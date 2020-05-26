@@ -151,7 +151,7 @@ button{
 
 .dropdown:hover .dropdown-content{
     transition: all ease-in-out 250ms;
-    width: 100%;
+    width: 160%;
     display: block;
 }
 
