@@ -59,6 +59,14 @@ button{
     padding: 10px;
 }
 
+#textbox{
+        background: rgb(243, 250, 262);
+        border-radius: 10px;
+        margin: 0 auto;
+        font-size: 100px;
+        padding: 30px;
+}
+
 #gstarted{
     background: rgb(227, 239, 243);
     border-radius: 10px;
