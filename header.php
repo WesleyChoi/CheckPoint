@@ -20,13 +20,16 @@
 	<nav class="nav-header-main">
 		<ul>
 			<li><a href="index.php">Home</a></li>
-			<li class="dropdown">ABOUT
-				<ul class="dropdown-content">
-					<li><a href="gstarted.php">Getting Started</a></li>
-					<li><a href="aboutus.php">About Us</a></li>
-					<li><a href="feedback.php">Feedback</a></li>
+			<div class="dropdown">
+			<li><a>ABOUT</a></li>
+			<div class="dropdown-content">
+				<ul>
+				<li><a href="gstarted.php">Getting Started</a></li>
+				<li><a href="aboutus.php">About Us</a></li>
+				<li><a href="feedback.php">Feedback</a></li>
 				</ul>
-			</li>
+			</div>
+			</div>
 			<?php
 				if (isset($_SESSION['userUid'])) {
 					if ($_SESSION['accType'] = "student") {
