@@ -1,3 +1,6 @@
+<!--login.inc.php processes form data from login.php
+It either logs user in or sends user back to form with an error message.-->
+
 <?php
     // login.inc.php sends entries from login form
     if (isset($_POST['login-submit'])) {
@@ -13,18 +16,18 @@
         
         $acctype = $_POST['acctype'];
 
-        if (empty($username) || empty($password)) { // send them back
+        if (empty($username) || empty($password)) { // send user back
             header("Location: ../login.php?error=emptyfields&uid=".$username);
             exit();
         }
         else {
             if ($acctype == "student") {
-                $sql = "SELECT * FROM students WHERE uidUsers=?;"; // check for username
+                $sql = "SELECT * FROM students WHERE uidUsers=?;"; // check for pre-existing username
             } else {
                 $sql = "SELECT * FROM teachers WHERE uidUsers=?;";
             }
             $stmt = mysqli_stmt_init($conn); // new sqli statement
-            // check that works with database
+            // check that statement works with database
             if (!mysqli_stmt_prepare($stmt, $sql)) {
                 header("Location: ../login.php?error=sqlerror&uid=".$username);
                 exit();
@@ -57,12 +60,12 @@
                         }
                         exit();
                     }
-                    else { // some mistake happened
+                    else { // some database error happened
                         header("Location: ../login.php?error=sqlerror&uid=".$username);
                         exit();
                     }
                 }
-                else {
+                else { // no user exists with that username
                     header("Location: ../login.php?error=nouser&uid=".$username);
                     exit();
                 }
