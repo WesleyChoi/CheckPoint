@@ -232,14 +232,23 @@ button{
     margin-right: auto;
 }
 
-#contact{
-    position: relative;
+#contact-wesley{
+    position: absolute;
     width: 35%;
     border-radius: 5px;
     background: rgb(210, 217, 236);
     padding: 30px;
-    margin-left: 50px;
     float: left;
+}
+
+#contact-kailey{
+    position: relative;
+    overflow: hidden;
+    width: 35%;
+    border-radius: 5px;
+    background: rgb(210, 217, 236);
+    padding: 30px;
+    float: right;
 }
 
 #itemclmn{
