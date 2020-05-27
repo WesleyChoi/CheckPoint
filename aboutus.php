@@ -14,7 +14,7 @@
             </div>
         </div>
         <div id="contact-kailey">
-            <h2>Kailey Chew</h2>
+            <a href="https://k-chew.github.io" target="_blank"><h2>Kailey Chew</h2></a>
             <p>Hi there! Thanks for popping by.</p>
             <p> I'm in my second year of Computer Science at the University of Waterloo, and I'm eager to gain experience in full-stack developing. Take a gander at my links if you like!</p>
             <div id="icons">
